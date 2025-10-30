@@ -1,0 +1,512 @@
+/* ---- 1. BASE STYLING (AAPKA DIYA HUA CODE) ---- */
+
+/* General Cleanliness */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #fcf8f3; 
+    color: #333; 
+    line-height: 1.6; /* Add this for readability */
+}
+
+/* Nav Bar (Aapke code mein .navbar class hai. Agar HTML mein .nav-bar hai, toh woh theek karna padega) */
+.nav-bar { /* Maine yahan .nav-bar kar diya hai jaisa ki humne HTML mein use kiya tha */
+    background-color: #ff8c94; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+/* Navigation Links */
+.nav-bar a { /* .nav-link ki jagah .nav-bar a kar diya hai */
+    color: white !important;
+    margin: 0 10px;
+    text-decoration: none; /* Link underline hataya */
+    display: inline-block;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent; 
+}
+
+.nav-bar a:hover, .nav-bar a.active {
+    color: #ffddc1 !important; 
+    border-bottom: 2px solid #ffffff; 
+}
+
+/* Main Content Area */
+.container {
+    margin-top: 30px;
+}
+
+/* Page Headers/Hero Section */
+.hero-section {
+    padding: 60px 20px;
+    background: linear-gradient(145deg, #fff5f5 0%, #fffbe3 100%); 
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 15px rgba(255, 140, 148, 0.2); 
+}
+
+.hero-section h1 {
+    color: #444;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+/* Content Boxes (e.g., Timeline entries, Wish box) */
+.content-box {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+    margin-bottom: 20px;
+}
+
+/* Headings within content */
+h2 {
+    color: #d1757e; 
+    border-bottom: 2px solid #ffddc1;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+
+/* ---- 2. PAGE SPECIFIC STYLES (JO MAINE DIYE HAIN) ---- */
+
+/* ---- TIMELINE SPECIFIC CSS ---- */
+/* Jo maine aapko timeline ke liye diya tha, woh yahan aayega */
+
+/* ---- GALLERY SPECIFIC CSS ---- */
+/* Jo maine aapko gallery ke liye diya tha, woh yahan aayega */
+
+/* ---- WISHES PAGE SPECIFIC CSS ---- */
+/* Jo maine aapko wishes page ke liye diya tha, woh yahan aayega */
+
+/* ---- SURPRISE PAGE SPECIFIC CSS ---- */
+/* Jo maine aapko surprise page ke liye diya tha, woh yahan aayega */
+
+
+
+
+
+
+/* -------------------------------------- */
+/* Gallery Page Styling (Polished Version) */
+/* -------------------------------------- */
+
+.photo-grid {
+    display: grid;
+    /* Large screens: 4 images, Mobile: 2 images. Yeh responsive formula hai. */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 25px; /* Photos ke beech ka space badhaya */
+    padding: 25px;
+}
+
+.grid-item {
+    background-color: #fff0f5; /* Lavender Blush (More aesthetic and cute) */
+    border-radius: 15px; /* Corners ko aur zyada round kiya */
+    overflow: hidden; 
+    box-shadow: 0 6px 15px rgba(255, 182, 193, 0.4); /* Soft pink shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px) scale(1.02); /* Thoda sa upar uthega aur bada hoga */
+    box-shadow: 0 10px 20px rgba(255, 105, 180, 0.6); /* Darker pink shadow for glow */
+}
+
+.grid-item img {
+    width: 100%;
+    height: 320px; /* Height thodi badhai, accha dikhega */
+    object-fit: cover; 
+    display: block;
+}
+
+.caption {
+    padding: 15px;
+    text-align: center;
+    font-weight: 700; /* Caption ko aur bold kiya */
+    color: #ff1493; /* Deep Pink for contrast */
+    background-color: #fffaf0; /* Caption ka background halka kiya */
+    font-size: 1.1em;
+}
+
+/* 📱 Mobile Responsiveness (grid-template-columns upar hi set ho gaya hai) */
+@media (max-width: 600px) {
+    .photo-grid {
+        gap: 15px; 
+        padding: 15px;
+    }
+    .grid-item img {
+        height: 200px; /* Mobile par height kam ki */
+    }
+}
+
+
+
+
+
+
+
+/* Wishes Page Specific CSS */
+
+.message-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh; /* Message ko center mein rakhne ke liye */
+    padding: 20px;
+    background: #fffafa; /* Thoda sa subtle, light background */
+}
+
+.wish-container {
+    max-width: 700px;
+    width: 100%;
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2); /* Soft pink shadow */
+    text-align: center;
+}
+
+.wish-heading {
+    color: #ff69b4; /* Cute pink heading */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif; /* Thoda romantic font use kar sakte hain */
+}
+
+.wish-text p {
+    font-size: 1.15em;
+    line-height: 1.8;
+    color: #4a4a4a;
+    margin-bottom: 15px;
+    text-align: left; /* Message ko padhne mein aasan banane ke liye left aligned */
+}
+
+.signature {
+    margin-top: 30px;
+    font-style: italic;
+    font-weight: bold;
+    color: #a0522d; /* Brown/Darker shade for contrast */
+    text-align: right !important; /* Signature ko right mein rakhenge */
+}
+
+
+
+
+
+
+/* -------------------------------------- */
+/* Timeline Section: Stylish Two-Sided Timeline */
+/* -------------------------------------- */
+
+/* Main container aur beech ki line */
+.timeline-section {
+    position: relative;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding-bottom: 50px;
+}
+
+/* Vertical line jo beech mein dikhegi */
+.timeline-section::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #ffb6c1; /* Soft pink line */
+    top: 0;
+    bottom: 0;
+    left: 55%;
+    margin-left: -3px;
+    border-radius: 3px;
+}
+
+/* Har ek 'date/memory' item */
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* Timeline line par chote circles/dots */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #ff69b4; /* Hot pink circle border */
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Left side ke items */
+.left-item {
+    left: 0;
+}
+
+/* Right side ke items ko beech ki line se shuru karne ke liye */
+.right-item {
+    left: 50%;
+}
+
+/* Right side ke circles ko left par shift karo */
+.right-item::after {
+    left: -16px;
+}
+
+/* Content box ka look */
+.timeline-content {
+    padding: 20px 30px;
+    background-color: #fff0f5; /* Lavender Blush background */
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 182, 193, 0.4); /* Soft pink shadow */
+}
+
+/* Left item ka arrow (Jo card se line tak jaata hai) */
+.left-item .timeline-content::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid #fff0f5;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #fff0f5;
+}
+
+/* Right item ka arrow */
+.right-item .timeline-content::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #fff0f5;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #fff0f5 transparent transparent;
+}
+
+/* 📱 Mobile Responsiveness: Ek single column timeline banate hain */
+@media screen and (max-width: 600px) {
+    /* Vertical line ko left mein shift karo */
+    .timeline-section::after {
+        left: 31px;
+    }
+
+    /* Saare items ko poori width do aur left mein shift karo */
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    /* Right items ki position theek karo */
+    .right-item {
+        left: 0%;
+    }
+
+    /* Saare circles ko left side par rakho */
+    .left-item::after, .right-item::after {
+        left: 15px;
+    }
+
+    /* Mobile par arrows hata dete hain */
+    .left-item .timeline-content::before, .right-item .timeline-content::before {
+        border: none;
+    }
+}
+
+
+
+
+
+
+
+/* Surprise Page Specific CSS */
+.surprise-page {
+    position: relative; /* Sparkle effect ke liye */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Page ki height badha di */
+    background: linear-gradient(to bottom, #ffe4e1, #ffc0cb); /* Soft pink gradient background */
+    overflow: hidden; /* Sparkles screen ke bahar na jayen */
+}
+
+.cake-container {
+    position: relative;
+    text-align: center;
+    margin-bottom: 50px;
+    z-index: 10; /* Cake sparkles ke upar dikhe */
+    animation: bounceIn 1s ease-out; /* Cake ke liye entry animation */
+}
+
+.birthday-cake {
+    max-width: 90%;
+    height: auto;
+    max-height: 400px; /* Cake ki max height */
+}
+
+.cake-message {
+    position: absolute;
+    top: 50%; /* Cake ke beech mein */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text perfectly */
+    width: 100%;
+    color: #8b0000; /* Dark Red for strong message */
+    font-family: 'Dancing Script', cursive; /* Agar aap koi fancy font use karein */
+    font-size: 2.5em; /* Message ka size */
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7); /* White shadow for readability */
+    white-space: nowrap; /* Text ko ek hi line mein rakhne ke liye */
+}
+
+/* Optional: Agar font 'Dancing Script' use karna hai to Google Fonts se link karna padega */
+/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap'); */
+
+/* Animations */
+@keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+/* Sparkle Effect (JavaScript se control hoga, yeh basic container hai) */
+.sparkle-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Mouse events iske through pass ho jayen */
+    z-index: 5; /* Cake ke peeche, background ke upar */
+}
+
+
+
+
+
+/* Targets the menu container when it is fully open on mobile */
+/* Isse menu ka background pink ho jayega */
+.navbar-collapse.show {
+    background-color: #FFD5c9 !important; 
+    padding: 15px 20px; 
+    border-radius: 0 0 10px 10px; 
+}
+
+/* Mobile menu ke andar ke har link ki styling */
+.navbar-collapse.show .navbar-nav .nav-item .nav-link {
+    color: #444444 !important;
+    font-weight: 600; 
+    padding: 10px 0; 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s;
+}
+
+/* Optional: Jab koi link par touch/tap kare toh kya ho */
+.navbar-collapse.show .navbar-nav .nav-item .nav-link:hover {
+    color: #8B4513 !important;
+    padding-left: 5px; 
+}
+
+
+
+
+
+
+/* 📱 Surprise Page Text Fix for Mobile */
+
+/* 1. Mobile Media Query start */
+@media (max-width: 600px) {
+    
+    /* 2. Target the main text container */
+    .cake-message {
+        /* Font size ko kaafi chota kar do, taaki woh phone par fit ho jaaye */
+        font-size: 1.8rem !important; 
+        
+        /* Yeh rule hata do, taaki text doosri line mein chala jaaye agar zarurat pade */
+        white-space: normal !important; 
+        
+        /* Agar text cut raha tha, toh yahaan padding de do side mein */
+        padding: 0 10px !important; 
+    }
+    
+    /* 3. Agar aapka .birthday-cake container bhi bada ho raha hai */
+    .birthday-cake {
+        /* Usko bhi mobile width ke hisaab se adjust karo */
+        max-width: 90% !important;
+    }
+}
+/* Mobile Media Query end */
+
+
+
+
+/* Surprise Page Text Fix for Mobile - More aggressive sizing */
+@media (max-width: 600px) {
+    .cake-message {
+        /* Ab font size ko 1.6rem kar do, taaki woh easily fit ho jaaye */
+        font-size: 1.6rem !important; 
+        white-space: normal !important; 
+        padding: 0 15px !important; /* Thoda side padding badha diya */
+    }
+}
+
+/* Agar koi bahut chota phone ho (optional, par safe rahega) */
+@media (max-width: 480px) {
+    .cake-message {
+        font-size: 1.4rem !important; /* Aur chota kar diya */
+        line-height: 1.1 !important; /* Line spacing bhi kam kar di */
+    }
+}
+
+
+
+
+
+
+/* ======================================= */
+/* 🤖 Doraemon Mascot Styling & Movement */
+/* ======================================= */
+
+/* Animation ko define karte hain: Isse Doraemon upar-neeche float karega */
+@keyframes float {
+    0% { transform: translateY(0px); } /* Start position */
+    50% { transform: translateY(-8px); } /* Thoda upar uthega */
+    100% { transform: translateY(0px); } /* Wapas neeche aayega */
+}
+
+.mascot-container {
+    text-align: center; /* Image ko center karne ke liye */
+    margin-top: 30px; /* Message aur mascot ke beech space */
+    margin-bottom: 50px; /* Mascot aur agle section ke beech space */
+}
+
+.doraemon-mascot {
+    max-width: 180px; /* Desktop par size */
+    height: auto;     
+    display: inline-block; 
+    border-radius: 50%; /* Image ko gol (round) dikhane ke liye (Optional, agar square ho toh) */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+
+    /* ⭐ Movement ka Code ⭐ */
+    animation: float 3s ease-in-out infinite; 
+}
+
+/* 📱 Mobile Responsiveness for Mascot */
+@media (max-width: 600px) {
+    .doraemon-mascot {
+        max-width: 120px; /* Mobile par chota kar do */
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+}
